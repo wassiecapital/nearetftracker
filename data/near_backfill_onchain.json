@@ -1,0 +1,220 @@
+{
+ "generated_utc": "2026-10-08T09:41:33+00:00",
+ "near_per_share_assumed": 5.221663522577132,
+ "pre_launch_baseline_near": 18215.607836,
+ "noise_floor_near": 26108.31761288566,
+ "settlement_lag_sessions": 1,
+ "method": "total NEAR = pool staked + custody wallet liquid balances, read at the block nearest 20:00 UTC; flow = change in total NEAR x NEAR close, attributed back 1 trading session(s)",
+ "warning": "ESTIMATE. Contaminated by staking rewards, the monthly in-kind sponsor fee, settlement timing and wallet-set drift. Superseded by any real issuer snapshot for the same date.",
+ "raw": [
+  {
+   "date": "2026-09-26",
+   "block": 217385718,
+   "block_utc": "2026-09-26T20:00:19+00:00",
+   "staked_near": 18215.489121,
+   "liquid_near": 0.118715,
+   "total_near": 18215.607836,
+   "wallets_unreadable": 0,
+   "near_usd": 4.834408074871883
+  },
+  {
+   "date": "2026-09-27",
+   "block": 217531734,
+   "block_utc": "2026-09-27T19:59:59+00:00",
+   "staked_near": 18218.697402,
+   "liquid_near": 0.118715,
+   "total_near": 18218.816117,
+   "wallets_unreadable": 0,
+   "near_usd": 5.426848053857224
+  },
+  {
+   "date": "2026-09-28",
+   "block": 217677476,
+   "block_utc": "2026-09-28T19:59:56+00:00",
+   "staked_near": 18262.570236,
+   "liquid_near": 0.118715,
+   "total_near": 18262.688951,
+   "wallets_unreadable": 0,
+   "near_usd": 4.729364629628127
+  },
+  {
+   "date": "2026-09-29",
+   "block": 217821168,
+   "block_utc": "2026-09-29T20:00:00+00:00",
+   "staked_near": 122653.85394,
+   "liquid_near": 0.542269,
+   "total_near": 122654.396209,
+   "wallets_unreadable": 0,
+   "near_usd": 4.967961788184719
+  },
+  {
+   "date": "2026-09-30",
+   "block": 217960556,
+   "block_utc": "2026-09-30T19:59:59+00:00",
+   "staked_near": 122676.44324,
+   "liquid_near": 7097976.016496,
+   "total_near": 7220652.459736,
+   "wallets_unreadable": 0,
+   "near_usd": 5.315367337126349
+  },
+  {
+   "date": "2026-10-01",
+   "block": 218102560,
+   "block_utc": "2026-10-01T20:00:05+00:00",
+   "staked_near": 7742903.447231,
+   "liquid_near": 2087606.34528,
+   "total_near": 9830509.792511,
+   "wallets_unreadable": 0,
+   "near_usd": 4.862816258040547
+  },
+  {
+   "date": "2026-10-02",
+   "block": 218248876,
+   "block_utc": "2026-10-02T20:00:00+00:00",
+   "staked_near": 9817247.328133,
+   "liquid_near": 1670054.730253,
+   "total_near": 11487302.058385,
+   "wallets_unreadable": 0,
+   "near_usd": 4.615273881397143
+  },
+  {
+   "date": "2026-10-03",
+   "block": 218396113,
+   "block_utc": "2026-10-03T20:00:00+00:00",
+   "staked_near": 11280369.459963,
+   "liquid_near": 208765.529037,
+   "total_near": 11489134.989,
+   "wallets_unreadable": 0,
+   "near_usd": 4.725311460482595
+  },
+  {
+   "date": "2026-10-04",
+   "block": 218543232,
+   "block_utc": "2026-10-04T19:59:42+00:00",
+   "staked_near": 11281836.487648,
+   "liquid_near": 208765.529037,
+   "total_near": 11490602.016685,
+   "wallets_unreadable": 0,
+   "near_usd": 4.9637563046140025
+  },
+  {
+   "date": "2026-10-05",
+   "block": 218690047,
+   "block_utc": "2026-10-05T19:59:56+00:00",
+   "staked_near": 11546698.907989,
+   "liquid_near": 10.072667,
+   "total_near": 11546708.980656,
+   "wallets_unreadable": 0,
+   "near_usd": 5.189707394700789
+  },
+  {
+   "date": "2026-10-06",
+   "block": 218837001,
+   "block_utc": "2026-10-06T19:59:56+00:00",
+   "staked_near": 11653058.847315,
+   "liquid_near": 10.272134,
+   "total_near": 11653069.119449,
+   "wallets_unreadable": 0,
+   "near_usd": 5.122741299284167
+  },
+  {
+   "date": "2026-10-07",
+   "block": 218983044,
+   "block_utc": "2026-10-07T20:00:00+00:00",
+   "staked_near": 11652128.393099,
+   "liquid_near": 10.272134,
+   "total_near": 11652138.665233,
+   "wallets_unreadable": 0,
+   "near_usd": 5.336108862914077
+  }
+ ],
+ "by_fund": {
+  "NRR": [
+   {
+    "date": "2026-09-28",
+    "estimated": true,
+    "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+    "flow": 493929.11,
+    "shares": 20001.0,
+    "nav": 24.695151,
+    "net_assets": 493929.11,
+    "coins": 104438.788373,
+    "near_usd": 4.729364629628127,
+    "coins_observed": "2026-09-29",
+    "seed": true
+   },
+   {
+    "date": "2026-09-29",
+    "estimated": true,
+    "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+    "flow": 35262583.15,
+    "shares": 1379338.0,
+    "nav": 25.941025,
+    "net_assets": 35781431.06,
+    "coins": 7202436.8519,
+    "near_usd": 4.967961788184719,
+    "coins_observed": "2026-09-30"
+   },
+   {
+    "date": "2026-09-30",
+    "estimated": true,
+    "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+    "flow": 13872350.42,
+    "shares": 1879151.0,
+    "nav": 27.75506,
+    "net_assets": 52155948.01,
+    "coins": 9812294.184675,
+    "near_usd": 5.315367337126349,
+    "coins_observed": "2026-10-01"
+   },
+   {
+    "date": "2026-10-01",
+    "estimated": true,
+    "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+    "flow": 8056676.37,
+    "shares": 2196443.0,
+    "nav": 25.39199,
+    "net_assets": 55772060.06,
+    "coins": 11469086.450549,
+    "near_usd": 4.862816258040547,
+    "coins_observed": "2026-10-02"
+   },
+   {
+    "date": "2026-10-02",
+    "estimated": true,
+    "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+    "flow": 258949.01,
+    "shares": 2207820.0,
+    "nav": 24.099407,
+    "net_assets": 53207154.36,
+    "coins": 11528493.37282,
+    "near_usd": 4.615273881397143,
+    "coins_observed": "2026-10-05"
+   },
+   {
+    "date": "2026-10-05",
+    "estimated": true,
+    "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+    "flow": 551978.0,
+    "shares": 2228189.0,
+    "nav": 27.098906,
+    "net_assets": 60381485.31,
+    "coins": 11634853.511613,
+    "near_usd": 5.189707394700789,
+    "coins_observed": "2026-10-06"
+   },
+   {
+    "date": "2026-10-06",
+    "estimated": true,
+    "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+    "flow": 0.0,
+    "shares": 2228011.0,
+    "nav": 26.749231,
+    "net_assets": 59597578.12,
+    "coins": 11633923.057397,
+    "near_usd": 5.122741299284167,
+    "coins_observed": "2026-10-07"
+   }
+  ]
+ }
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEAR ETF Flows</title>
+<meta name="description" content="Daily net creation flows for US-listed spot NEAR Protocol ETFs, derived from issuer shares outstanding and NAV, with an on-chain custody cross-check.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='12'>Ⓝ</text></svg>">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-src="data/near_flows.json" data-asset="NEAR">
+<div class="wrap">
+
+  <header>
+    <div class="hgroup">
+      <h1>NEAR ETF flows</h1>
+      <p class="sub">US-listed spot NEAR ETFs — net creations per session, derived from issuer shares outstanding × NAV, cross-checked against on-chain custody.</p>
+      <p class="meta" id="updated">loading…</p>
+    </div>
+    <div class="controls">
+      <div class="seg" id="ranges">
+        <button data-range="1m">1M</button>
+        <button data-range="3m">3M</button>
+        <button data-range="6m">6M</button>
+        <button data-range="all" aria-pressed="true">All</button>
+      </div>
+      <div class="seg" id="grain">
+        <button data-grain="d" aria-pressed="true">D</button>
+        <button data-grain="w">W</button>
+      </div>
+      <button id="toggle-table">Table view</button>
+      <button id="dl">CSV</button>
+      <button id="theme" title="Toggle light / dark">Theme</button>
+    </div>
+  </header>
+
+  <nav class="siblings" aria-label="Other trackers">
+    <a href="../ltcetftracker/">LTC</a>
+    <a href="../nearetftracker/" aria-current="page">NEAR</a>
+    <a href="../zecetftracker/">ZEC</a>
+    <span class="sep">US spot ETF creation flows</span>
+  </nav>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section>
+    <h2>Net flow by session</h2>
+    <p class="cap">Share count × NAV, session by session. Flow is money in and out — it ignores what NEAR did to the price, and it excludes staking rewards. Faded bars are reconstructed from on-chain custody balances rather than reported share counts; see the method note.</p>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--in)"></i>Creations (inflow)</span>
+      <span><i class="swatch" style="background:var(--out)"></i>Redemptions (outflow)</span>
+      <span id="ma-legend" hidden><i class="swatch" style="background:var(--text-2)"></i>10-session average</span>
+      <span><i class="swatch" style="background:var(--in);opacity:.55"></i>Estimated (on-chain)</span>
+    </div>
+    <div class="chart" id="c-flow"></div>
+  </section>
+
+  <section>
+    <h2>Cumulative net flow</h2>
+    <p class="cap">Every creation since launch, summed. The gap between this line and net assets is price and fees — not flow.</p>
+    <div class="chart" id="c-cum"></div>
+  </section>
+
+  <section>
+    <h2>Shares outstanding</h2>
+    <p class="cap">The mechanism behind the lumpiness. Shares move only in 10,000-share creation baskets struck by an authorised participant, so this is a staircase. Hover for the basket count.</p>
+    <div class="chart" id="c-shares"></div>
+  </section>
+
+  <section id="onchain-sec" hidden>
+    <h2>NEAR in custody — on-chain</h2>
+    <p class="cap">An independent read on the same fund: the NEAR actually sitting in Bitwise's 51 custody addresses, 48 of which delegate to <code>bitwise_2.poolv1.near</code>, sampled at the block nearest 16:00 ET. It confirms reported holdings and catches a stale issuer page. Note it lags share creation by roughly one session while purchases settle, and it drifts up on its own as staking rewards accrue.</p>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--text-2)"></i>Total NEAR held (staked + liquid)</span>
+    </div>
+    <div class="chart" id="c-onchain"></div>
+  </section>
+
+  <section>
+    <h2>The complex</h2>
+    <p class="cap">Every US-listed single-asset NEAR product, trading or filed. One fund trades today — read a quiet tape as a one-fund tape, not as an absent asset class.</p>
+    <div class="scroll" id="funds"></div>
+  </section>
+
+  <section id="watch-sec">
+    <h2>Listing watch</h2>
+    <p class="cap">Checked against SEC EDGAR on every run. A Form 8-A12B is the filing that means a pending trust is days from listing — when one appears, add its adapter to <code>scripts/funds.py</code>.</p>
+    <div id="watch"></div>
+  </section>
+
+  <section id="sessions-sec" hidden>
+    <h2>All sessions</h2>
+    <p class="cap">The same data as a table, newest first.</p>
+    <div class="scroll tall" id="sessions"></div>
+  </section>
+
+  <section>
+    <h2>Method and caveats</h2>
+    <p class="cap" id="method"></p>
+    <ul class="notes" id="caveats"></ul>
+  </section>
+
+  <footer>
+    Source: <a href="https://nrretf.com/">Bitwise NRR fund data</a>, NEAR mainnet archival RPC for custody balances,
+    CoinGecko for NEAR closes, and <a href="https://www.sec.gov/edgar/searchedgar/companysearch">SEC EDGAR</a> for listing status.
+    Rebuilt daily by GitHub Actions — this file is the series, since no aggregator publishes NEAR ETF flows.
+    Not investment advice; verify against the issuer before citing.
+  </footer>
+
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

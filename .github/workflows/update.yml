@@ -1,0 +1,45 @@
+name: update flows
+
+on:
+  schedule:
+    # Bitwise posts the prior session's NAV/shares with a lag, so check twice a day.
+    # Times are UTC. 22:00 UTC = 18:00 ET, 10:00 UTC = 06:00 ET.
+    - cron: "0 22 * * 1-5"
+    - cron: "0 10 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-flows
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Rebuild flow series
+        run: python scripts/update.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/; then
+            echo "no change"
+            exit 0
+          fi
+          LAST=$(python -c "import json;d=json.load(open('data/near_flows.json'));s=d['series'][-1];print(f\"{s['date']} flow \${s['flow']:,.0f}\")")
+          git add data/
+          git commit -m "data: NEAR flows through $LAST"
+          git push

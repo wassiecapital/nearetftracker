@@ -1,0 +1,343 @@
+{
+ "asset": "NEAR",
+ "asset_name": "NEAR Protocol",
+ "updated_utc": "2026-10-08T09:42:25+00:00",
+ "method": "flow = change in shares outstanding x NAV, per fund, per trading day; NAV recomputed as net assets / shares outstanding on a single as-of date",
+ "funds": [
+  {
+   "ticker": "NRR",
+   "issuer": "Bitwise",
+   "name": "Bitwise NEAR ETF",
+   "exchange": "NYSE Arca",
+   "status": "live",
+   "adapter": "bitwise_nextdata",
+   "fee": 0.0075,
+   "stakes": true,
+   "staking_expense": 0.33,
+   "seed_date": "2026-09-28",
+   "first_trade": "2026-09-29",
+   "cik": "2067111",
+   "cusip": "091952101",
+   "basket_shares": 10000,
+   "source": "https://nrretf.com/",
+   "staking_pool": "bitwise_2.poolv1.near"
+  },
+  {
+   "ticker": "GSNR",
+   "issuer": "Grayscale",
+   "name": "Grayscale Near Trust (ETF conversion pending)",
+   "exchange": "OTCQB (NYSE Arca proposed)",
+   "status": "pending_19b4",
+   "adapter": null,
+   "fee": 0.025,
+   "stakes": false,
+   "cik": "2025000",
+   "note": "Reg-D trust quoted on OTCQB. S-1 filed 20 Jan 2026, S-1/A 12 Jun 2026; no 8-A12B, 424B3, EFFECT or CERT on file, so it has not converted. ~$1.1m AUM, 401,800 shares, 1.4441 NEAR/share at last disclosure."
+  }
+ ],
+ "live_tickers": [
+  "NRR"
+ ],
+ "coins_total": {
+  "amount": 12270909.2781,
+  "unit": "NEAR",
+  "as_of": "2026-10-07"
+ },
+ "series": [
+  {
+   "date": "2026-09-28",
+   "by_fund": {
+    "NRR": {
+     "date": "2026-09-28",
+     "estimated": true,
+     "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+     "flow": 493929.11,
+     "shares": 20001.0,
+     "nav": 24.695151,
+     "net_assets": 493929.11,
+     "coins": 104438.788373,
+     "near_usd": 4.729364629628127,
+     "coins_observed": "2026-09-29",
+     "seed": true
+    }
+   },
+   "flow": 493929.11,
+   "net_assets": 493929.11,
+   "estimated": true,
+   "cum_flow": 493929.11
+  },
+  {
+   "date": "2026-09-29",
+   "by_fund": {
+    "NRR": {
+     "date": "2026-09-29",
+     "estimated": true,
+     "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+     "flow": 35262583.15,
+     "shares": 1379338.0,
+     "nav": 25.941025,
+     "net_assets": 35781431.06,
+     "coins": 7202436.8519,
+     "near_usd": 4.967961788184719,
+     "coins_observed": "2026-09-30"
+    }
+   },
+   "flow": 35262583.15,
+   "net_assets": 35781431.06,
+   "estimated": true,
+   "cum_flow": 35756512.26
+  },
+  {
+   "date": "2026-09-30",
+   "by_fund": {
+    "NRR": {
+     "date": "2026-09-30",
+     "estimated": true,
+     "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+     "flow": 13872350.42,
+     "shares": 1879151.0,
+     "nav": 27.75506,
+     "net_assets": 52155948.01,
+     "coins": 9812294.184675,
+     "near_usd": 5.315367337126349,
+     "coins_observed": "2026-10-01"
+    }
+   },
+   "flow": 13872350.42,
+   "net_assets": 52155948.01,
+   "estimated": true,
+   "cum_flow": 49628862.68
+  },
+  {
+   "date": "2026-10-01",
+   "by_fund": {
+    "NRR": {
+     "date": "2026-10-01",
+     "estimated": true,
+     "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+     "flow": 8056676.37,
+     "shares": 2196443.0,
+     "nav": 25.39199,
+     "net_assets": 55772060.06,
+     "coins": 11469086.450549,
+     "near_usd": 4.862816258040547,
+     "coins_observed": "2026-10-02"
+    }
+   },
+   "flow": 8056676.37,
+   "net_assets": 55772060.06,
+   "estimated": true,
+   "cum_flow": 57685539.05
+  },
+  {
+   "date": "2026-10-02",
+   "by_fund": {
+    "NRR": {
+     "date": "2026-10-02",
+     "shares": 2210000,
+     "net_assets": 53400963.36,
+     "nav": 24.163332,
+     "coins": 11535015.36852332,
+     "coins_as_of": "2026-10-02",
+     "market_price": 25.37,
+     "price_as_of": "2026-10-01",
+     "premium_discount": 25.37,
+     "staked_pct": 0.9818178775102222,
+     "staking_gross": 0.04897755857453385,
+     "staking_net": 0.032814964244937676,
+     "wallet_count": 51,
+     "wallet_near": 11481911.925,
+     "onchain_pool_staked": 11284703.62620467,
+     "estimated": false,
+     "captured_utc": "2026-10-05T06:15:54+00:00",
+     "flow": 327582.29
+    }
+   },
+   "flow": 327582.29,
+   "net_assets": 53400963.36,
+   "estimated": false,
+   "cum_flow": 58013121.34
+  },
+  {
+   "date": "2026-10-05",
+   "by_fund": {
+    "NRR": {
+     "date": "2026-10-05",
+     "estimated": true,
+     "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+     "flow": 551978.0,
+     "shares": 2228189.0,
+     "nav": 27.098906,
+     "net_assets": 60381485.31,
+     "coins": 11634853.511613,
+     "near_usd": 5.189707394700789,
+     "coins_observed": "2026-10-06"
+    }
+   },
+   "flow": 551978.0,
+   "net_assets": 60381485.31,
+   "estimated": true,
+   "cum_flow": 58565099.34
+  },
+  {
+   "date": "2026-10-06",
+   "by_fund": {
+    "NRR": {
+     "date": "2026-10-06",
+     "estimated": true,
+     "basis": "on-chain custody balances x NEAR close, net of the pre-launch validator stake, attributed back 1 session(s) for settlement; sub-basket deltas treated as staking accrual. See backfill_onchain.py",
+     "flow": 0.0,
+     "shares": 2228011.0,
+     "nav": 26.749231,
+     "net_assets": 59597578.12,
+     "coins": 11633923.057397,
+     "near_usd": 5.122741299284167,
+     "coins_observed": "2026-10-07"
+    }
+   },
+   "flow": 0.0,
+   "net_assets": 59597578.12,
+   "estimated": true,
+   "cum_flow": 58565099.34
+  },
+  {
+   "date": "2026-10-07",
+   "by_fund": {
+    "NRR": {
+     "date": "2026-10-07",
+     "shares": 2350000,
+     "net_assets": 65393849.45,
+     "nav": 27.82717,
+     "coins": 12270909.27805626,
+     "coins_as_of": "2026-10-07",
+     "market_price": 26.82,
+     "price_as_of": "2026-10-06",
+     "premium_discount": 26.82,
+     "staked_pct": 0.9489217244925651,
+     "staking_gross": 0.04905350799800693,
+     "staking_net": 0.03286585035866464,
+     "wallet_count": 53,
+     "wallet_near": 12264937.8437,
+     "onchain_pool_staked": 11653134.075529793,
+     "estimated": false,
+     "captured_utc": "2026-10-08T09:42:20+00:00",
+     "flow": 3394608.64
+    }
+   },
+   "flow": 3394608.64,
+   "net_assets": 65393849.45,
+   "estimated": false,
+   "cum_flow": 61959707.98
+  }
+ ],
+ "onchain": [
+  {
+   "date": "2026-09-28",
+   "staked_near": 18262.570236,
+   "liquid_near": 0.118715,
+   "total_near": 18262.688951,
+   "near_usd": 4.729364629628127,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-09-29",
+   "staked_near": 122653.85394,
+   "liquid_near": 0.542269,
+   "total_near": 122654.396209,
+   "near_usd": 4.967961788184719,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-09-30",
+   "staked_near": 122676.44324,
+   "liquid_near": 7097976.016496,
+   "total_near": 7220652.459736,
+   "near_usd": 5.315367337126349,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-10-01",
+   "staked_near": 7742903.447231,
+   "liquid_near": 2087606.34528,
+   "total_near": 9830509.792511,
+   "near_usd": 4.862816258040547,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-10-02",
+   "staked_near": 9817247.328133,
+   "liquid_near": 1670054.730253,
+   "total_near": 11487302.058385,
+   "near_usd": 4.615273881397143,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-10-03",
+   "staked_near": 11280369.459963,
+   "liquid_near": 208765.529037,
+   "total_near": 11489134.989,
+   "near_usd": 4.725311460482595,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-10-04",
+   "staked_near": 11281836.487648,
+   "liquid_near": 208765.529037,
+   "total_near": 11490602.016685,
+   "near_usd": 4.9637563046140025,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-10-05",
+   "staked_near": 11284703.626205,
+   "liquid_near": 197208.298762,
+   "total_near": 11481911.924966,
+   "near_usd": null,
+   "source": "fund page + live pool read"
+  },
+  {
+   "date": "2026-10-06",
+   "staked_near": 11653058.847315,
+   "liquid_near": 10.272134,
+   "total_near": 11653069.119449,
+   "near_usd": 5.122741299284167,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-10-07",
+   "staked_near": 11652128.393099,
+   "liquid_near": 10.272134,
+   "total_near": 11652138.665233,
+   "near_usd": 5.336108862914077,
+   "source": "archival-rpc"
+  },
+  {
+   "date": "2026-10-08",
+   "staked_near": 11653134.07553,
+   "liquid_near": 611803.768205,
+   "total_near": 12264937.843735,
+   "near_usd": null,
+   "source": "fund page + live pool read"
+  }
+ ],
+ "listing_watch": [
+  {
+   "ticker": "GSNR",
+   "cik": "2025000",
+   "exchanges": [
+    "OTC"
+   ],
+   "has_8a": false,
+   "latest_form": "SCHEDULE 13G",
+   "latest_form_date": "2026-09-25",
+   "action": "no 8-A yet"
+  }
+ ],
+ "caveats": [
+  "Rows marked estimated are reconstructed from on-chain custody balances, not from issuer-reported share counts. Treat them as indicative.",
+  "No third party publishes a NEAR ETF flow series \u2014 this file IS the series. A day not captured cannot be recovered from the issuer.",
+  "Flow excludes price movement and excludes staking rewards.",
+  "Creations are struck in 10,000-share baskets, so zero-flow days are mechanical, not a demand signal.",
+  "Bitwise's own numbers lag by one to two business days; the as-of date on each row is the issuer's, not the capture date."
+ ]
+}
