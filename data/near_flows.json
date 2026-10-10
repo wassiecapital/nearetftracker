@@ -1,7 +1,7 @@
 {
  "asset": "NEAR",
  "asset_name": "NEAR Protocol",
- "updated_utc": "2026-10-10T01:38:37+00:00",
+ "updated_utc": "2026-10-10T15:40:07+00:00",
  "method": "flow = change in shares outstanding x NAV, per fund, per trading day; NAV recomputed as net assets / shares outstanding on a single as-of date",
  "funds": [
   {
@@ -276,9 +276,9 @@
      "staking_net": 0.03293077855727701,
      "wallet_count": 58,
      "wallet_near": 13152484.9095,
-     "onchain_pool_staked": 13172662.446033347,
+     "onchain_pool_staked": 13173747.610035328,
      "estimated": false,
-     "captured_utc": "2026-10-10T01:38:34+00:00",
+     "captured_utc": "2026-10-10T15:40:04+00:00",
      "flow": 5131290.99
     }
    },
@@ -387,8 +387,8 @@
   },
   {
    "date": "2026-10-10",
-   "staked_near": 13172662.446033,
-   "liquid_near": -20177.536545,
+   "staked_near": 13173747.610035,
+   "liquid_near": -21262.700547,
    "total_near": 13152484.909488,
    "near_usd": null,
    "source": "fund page + live pool read"
